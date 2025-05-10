@@ -4,7 +4,7 @@ function [PIDdata] = readLog(basename)
     %% Check inputs
     
     if ~exist('basename', 'var')
-        basename = '*.log';         %no input: load any .mpt file
+        basename = '*.log';         %no input: load any .log file
     elseif ~endsWith(regexptranslate('wildcard',basename),'.log')
         if endsWith(regexptranslate('wildcard',basename),'*')
             basename = strcat(basename,'.log'); %input without file identifier but with wildcard
